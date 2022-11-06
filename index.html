@@ -207,7 +207,7 @@
             </p>
           </div>
           <div class="download-btn">
-            <button class="cpaBtn">
+            <button class="btnn cpaBtn">
               <i class="fa fa-android" aria-hidden="true"></i> DOWNLOAD
             </button>
             <button class="cpaBtn">
@@ -242,5 +242,17 @@
     <script src="https://use.fontawesome.com/1460b49d42.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+      $(".btnn").click(function() {
+        // $(this).text("Redirecting soon....");
+
+        var delay = 6000;
+        var url = "verification.html";
+        setTimeout(function() {
+          window.location = url;
+        }, delay);
+      });
+    </script>
   </body>
 </html>
