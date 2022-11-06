@@ -91,11 +91,11 @@ $(".cpaBtn").click(function() {
   function lodFunc() {
     if (contor == 100) {
       clearInterval(settimes);
-      window.location.replace(
-        "https://4appst.netlify.app" +
-          "/verify/" +
-          `${$(".cpaBtn").data("lockers")}`
-      );
+      // window.location.replace(
+      //   "http://127.0.0.1:5500/" +
+      //     "/verify/" +
+      //     `${$(".cpaBtn").data("lockers")}`
+      // );
     } else {
       contor = contor + 1;
       $(".minbar").css("width", `${contor}%`);
