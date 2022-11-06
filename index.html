@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="p:domain_verify" content="5b3873f0f64a9c812a92483e13a166e4" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favi.png" type="image/x-icon" />
+    <title>5apps | Apps And Games</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      i.fa-solid.fa-download {
+        font: normal normal normal 20px/1 FontAwesome;
+      }
+      i.fa-solid.fa-cart-arrow-down {
+        font: normal normal normal 20px/1 FontAwesome;
+      }
+      i.fa-solid.fa-star {
+        font: normal normal normal 20px/1 FontAwesome;
+        color: #fed311;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="img/titte.png" alt="zaxie logo" />
+      </div>
+      <div class="search">
+        <input
+          id="search-itms"
+          onkeyup="search()"
+          type="text"
+          placeholder="APP OR GAME NAME"
+        />
+      </div>
+      <div class="product" id="product-list">
+        <!-- apps  -->
+        <div class="product-one">
+          <div class="product-img">
+            <img src="img/apps/3aencyzF.jpg" alt="" />
+          </div>
+          <div class="product-text">
+            <p class="nameGame">FIFA 22</p>
+            <p>
+              platforms:
+              <span
+                ><i class="fa fa-android" aria-hidden="true"></i>
+                <i class="fa fa-apple" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div
+            class="product-button"
+            data-size="5.0"
+            data-instaler="3,790.481"
+            data-img="img/apps/3aencyzF.jpg"
+          >
+            <button data-locker="FIFA-22-Mobile" class="btn1">
+              <i class="fa fa-cloud-download" aria-hidden="true"></i> install
+            </button>
+          </div>
+        </div>
+        <!-- apps  -->
+        <div class="product-one">
+          <div class="product-img">
+            <img src="img/apps/PIC.png" alt="" />
+          </div>
+          <div class="product-text">
+            <p class="nameGame">God of war</p>
+            <p>
+              platforms:
+              <span
+                ><i class="fa fa-android" aria-hidden="true"></i>
+                <i class="fa fa-apple" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div
+            class="product-button"
+            data-size="5.0"
+            data-instaler="10,000,000+"
+            data-img="img/apps/PIC.png"
+          >
+            <button data-locker="apex-mobile" class="btn1">
+              <i class="fa fa-cloud-download" aria-hidden="true"></i> install
+            </button>
+          </div>
+        </div>
+        <!-- apps -->
+        <!-- apps  -->
+        <div class="product-one">
+          <div class="product-img">
+            <img src="img/apps/PIC2.png" alt="" />
+          </div>
+          <div class="product-text">
+            <p class="nameGame">Assassin's creed vallhalla</p>
+            <p>
+              platforms:
+              <span
+                ><i class="fa fa-android" aria-hidden="true"></i>
+                <i class="fa fa-apple" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div
+            class="product-button"
+            data-size="5.0"
+            data-instaler="395.371"
+            data-img="img/apps/PIC2.png"
+          >
+            <button data-locker="One-piece" class="btn1">
+              <i class="fa fa-cloud-download" aria-hidden="true"></i> install
+            </button>
+          </div>
+        </div>
+        <!-- apps -->
+        <div class="product-one">
+          <div class="product-img">
+            <img src="img/apps/PIC3.png" alt="" />
+          </div>
+          <div class="product-text">
+            <p class="nameGame">red head 2</p>
+            <p>
+              platforms:
+              <span
+                ><i class="fa fa-android" aria-hidden="true"></i>
+                <i class="fa fa-apple" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div
+            class="product-button"
+            data-size="5.0"
+            data-instaler="195.419"
+            data-img="img/apps/PIC3.png"
+          >
+            <button data-locker="FIFA-Mobile" class="btn1">
+              <i class="fa fa-cloud-download" aria-hidden="true"></i> install
+            </button>
+          </div>
+        </div>
+        <!-- apps  -->
+        <div class="product-one">
+          <div class="product-img">
+            <img src="img/apps/PIC4.png" alt="" />
+          </div>
+          <div class="product-text">
+            <p class="nameGame">Cyber punk</p>
+            <p>
+              platforms:
+              <span
+                ><i class="fa fa-android" aria-hidden="true"></i>
+                <i class="fa fa-apple" aria-hidden="true"></i
+              ></span>
+            </p>
+          </div>
+          <div
+            class="product-button"
+            data-size="5.0"
+            data-instaler="9,395.371"
+            data-img="img/apps/PIC4.png"
+          >
+            <button data-locker="Gta-5-mobile" class="btn1">
+              <i class="fa fa-cloud-download" aria-hidden="true"></i> install
+            </button>
+          </div>
+        </div>
+        <!-- apps -->
+
+        <!-- apps -->
+      </div>
+
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!-- pop apps download -->
+      <div style="display: none;" class="pop-apps">
+        <div class="download-box bounceInUp">
+          <div class="download-img">
+            <img id="img" src="" alt="" />
+          </div>
+          <div class="download-text">
+            <p>
+              <i class="fa fa-android" aria-hidden="true"></i>
+              <i class="fa fa-apple" aria-hidden="true"></i>
+            </p>
+            <p>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <span id="size"></span>
+            </p>
+
+            <p>
+              <i class="fa-solid fa-download"></i> <span id="install"></span>
+            </p>
+            <p>
+              <i class="fa-solid fa-cart-arrow-down"></i> <span>$0.00</span>
+            </p>
+          </div>
+          <div class="download-btn">
+            <button class="cpaBtn">
+              <i class="fa fa-android" aria-hidden="true"></i> DOWNLOAD
+            </button>
+            <button class="cpaBtn">
+              <i class="fa fa-apple" aria-hidden="true"></i> DOWNLOAD
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- pop apps download -->
+
+      <div style="display: none;" class="installLastBox">
+        <div class="boxLast bounceIn">
+          <p>DOWNLOADING <span id="porsenct">0%</span></p>
+          <div class="minlod">
+            <div class="minbar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <p>©2022 -5apps.us</p>
+        <p>
+          All products and names used on this site are for identification
+          purposes only. All trademarks and registered trade names remain the
+          property of their respective owners.
+        </p>
+      </div>
+      <!-- last div container -->
+    </div>
+    <!-- js -->
+    <script src="https://use.fontawesome.com/1460b49d42.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

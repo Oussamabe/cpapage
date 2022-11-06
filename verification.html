@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Block Robots from crawling this page -->
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Give the page a title -->
+    <title></title>
+
+    <!-- Include our jQuery version -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Include our Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700|Roboto:400,700"
+      rel="stylesheet"
+    />
+
+    <!-- Include FontAwesome -->
+    <link
+      href="https://s3.us-west-1.amazonaws.com/cloudfls.co/themes/startui/css/lib/font-awesome/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Sweet Alert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.css"
+    />
+
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+    <!-- Color Picker -->
+    <script src="https://s3.us-west-1.amazonaws.com/cloudfls.co/themes/startui/css/lib/colorpicker/js/colorpicker.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://s3.us-west-1.amazonaws.com/cloudfls.co/themes/startui/css/lib/colorpicker/css/colorpicker.css"
+    />
+
+    <!-- Our Application's CSS stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/151981978211ad81ad9b8c843e4b3c3052a8d6138c.css"
+    />
+
+    <script>
+      // What's the XRF token?
+      var xrfToken = "%XRF_TOKEN%";
+
+      // What Locker Settings were saved?
+      var savedLockerSettings = {
+        css: {
+          pc: {
+            body: {
+              background: {
+                color: "transparent",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+            },
+            "body-human-verification": {
+              background: {
+                color: "#fbfbfb",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "background-hover": {
+                color: "#b1b1b1",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-radius": "4",
+              "border-color": "#b9b9b9",
+              "border-color-hover": "#b9b9b9",
+              "border-width": "1",
+              "font-color": "#9c9c9c",
+              "font-color-hover": "#565656",
+              "font-size": "14",
+              "font-weight": "normal",
+              "margin-bottom": "79",
+              "margin-top": "84",
+              "padding-top": "8",
+              "padding-bottom": "8",
+            },
+            "body-offers": {
+              "text-bottom-align": "center",
+              "text-bottom-color": "#525252",
+              "text-bottom-padding-bottom": "21",
+              "text-bottom-padding-top": "28",
+              "text-bottom-shadow": "transparent",
+              "text-bottom-size": "17",
+              "text-bottom-weight": "bold",
+              "text-top-align": "center",
+              "text-top-color": "#0a010a",
+              "text-top-padding-bottom": "1",
+              "text-top-padding-top": "7",
+              "text-top-shadow": "transparent",
+              "text-top-size": "21",
+              "text-top-weight": "bold",
+            },
+            "body-offers-list": {
+              align: "center",
+              background: {
+                color: "#fbfbfb",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "background-hover": {
+                color: "#b1b1b1",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-color": "#4f4d4f",
+              "border-radius": "7",
+              "border-width": "5",
+              "font-color": "#ffffff",
+              "font-color-hover": "#ffffff",
+              "font-size": "14",
+              "font-weight": "bold",
+              "margin-bottom": "6",
+              "margin-top": "11",
+              "padding-bottom": "9",
+              "padding-top": "10",
+              "text-align": "center",
+              width: "84",
+            },
+            header: {
+              background: {
+                color: "transparent",
+                horizontal: "left",
+                image: "img/header.png",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-color": "#ffffff",
+              "border-width": "0",
+              "border-box-shadow": "transparent",
+              display: "block",
+              "font-align": "center",
+              "font-color": "#525252",
+              "font-size": "17",
+              "font-weight": "normal",
+              "padding-bottom": "250",
+              "padding-top": "55",
+            },
+            footer: {
+              background: {
+                color: "#ffffff",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-color": "#ffffff",
+              "border-width": "0",
+              "border-box-shadow": "transparent",
+              display: "block",
+              "font-align": "center",
+              "font-color": "#2893b4",
+              "font-size": "14",
+              "font-weight": "bold",
+              "padding-bottom": "0",
+              "padding-top": "0",
+            },
+            locker: {
+              "border-radius": "10",
+              "box-shadow": "#292929",
+              font: "Montserrat",
+              width: "621",
+            },
+            page: {
+              background: {
+                color: "transparent",
+                horizontal: "left",
+                image:
+                  "https://d13pxqgp3ixdbh.cloudfront.net/uploads/1651800077314dc59592bf6a3cd1820c8aec1e9f20.jpg",
+                size: "cover",
+                vertical: "top",
+              },
+              opacity: "81",
+            },
+          },
+          phone: {
+            body: {},
+            "body-human-verification": {
+              "border-radius": "4",
+              "border-width": "1",
+              "font-size": "11",
+              "font-weight": "normal",
+              "margin-bottom": "57",
+              "margin-top": "60",
+              "padding-top": "8",
+              "padding-bottom": "8",
+            },
+            "body-offers": {
+              "text-bottom-padding-bottom": "16",
+              "text-bottom-padding-top": "12",
+              "text-bottom-size": "14",
+              "text-bottom-weight": "bold",
+              "text-top-padding-bottom": "14",
+              "text-top-padding-top": "15",
+              "text-top-size": "14",
+              "text-top-weight": "bold",
+            },
+            "body-offers-list": {
+              "border-width": "2",
+              "font-size": "12",
+              "font-weight": "bold",
+              "margin-bottom": "5",
+              "margin-top": "0",
+              "padding-bottom": "10",
+              "padding-top": "12",
+              width: "88",
+            },
+            header: {
+              "border-width": "0",
+              "font-size": "13",
+              "font-weight": "normal",
+              "padding-bottom": "112",
+              "padding-top": "86",
+            },
+            footer: {
+              "border-width": "0",
+              "font-size": "9",
+              "font-weight": "normal",
+              "padding-bottom": "8",
+              "padding-top": "5",
+            },
+            locker: {},
+            page: {},
+          },
+        },
+        "css-custom":
+          "@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);\nhtml {\n    height: 100% !important;;\n}\n\nbody.mobile {\n    height: 100% !important;;\n    margin: 0 !important;\n    padding: 0 !important;;\n    \n}\np.last {\n    background: #393a3a;\n    padding: 6px;\n    position: relative;\n    width: 100%;\n    color: #409a44;\n    height: 29px;\n    bottom: 20px;\n    font-size: 20px;\n    border-radius: 8px;\n    right:5px;\n}\n/* Slideshow container */\n.slideshow-container {\n  position: relative;\n}\niframe {\n    border: 11px solid #207b96;\n    border-radius: 7px;\n}\n/* Slides */\n.mySlides {\n position: inherit;\n    color: #ffffff;\n    border: 6px solid #393a3a;\n    background-image: linear-gradient(to bottom, #1976D2 0%, #1565C0 100%) !important;\n    text-shadow: 2px 2px 3px rgb(56 56 56);\n    border-radius: 12px;\n    font-size: 14px;\n    text-align: center;\n    padding: 0px 1px 0px 1px;\n    font-family: revert;\n    width: 100%;\n    font-style: revert;\n    \n}\n\n/* Next & previous buttons */\n.prev, .next {\n  cursor: pointer;\n  position: absolute;\n  top: 50%;\n  width: auto;\n  margin-top: -30px;\n  padding: 16px;\n  color: #888;\n  font-weight: bold;\n  font-size: 20px;\n  border-radius: 0 3px 3px 0;\n  user-select: none;\n}\n\n/* Position the \"next button\" to the right */\n.next {\n  cursor: pointer;\n    position: absolute;\n    top: 72%;\n    width: auto;\n    color: #f4eded;\n    font-weight: bold;\n    font-size: 43px;\n    border-radius: 0 3px 3px 0;\n    user-select: none;\n right: 30px;\n    \n}\n.prev {\n  cursor: pointer;\n    position: absolute;\n    top: 72%;\n    width: auto;\n    color: #f4eded;\n    font-weight: bold;\n    font-size: 43px;\n    border-radius: 0 3px 3px 0;\n    user-select: none;\n    left: 30px;\n}\n\n/* On hover, add a black background color with a little bit see-through */\n.prev:hover, .next:hover {\n  \n  color: white;\n}\n\n/* The dot/bullet/indicator container */\n.dot-container {\n  text-align: center;\n  padding: 20px;\n  background: #ddd;\n  display: none;\n}\n\n/* The dots/bullets/indicators */\n.dot {\n  cursor: pointer;\n  height: 15px;\n  width: 15px;\n  margin: 0 2px;\n  background-color: #bbb;\n  border-radius: 50%;\n  display: inline-block;\n  transition: background-color 0.6s ease;\n}\n\n/* Add a background color to the active dot/circle */\n.active, .dot:hover {\n  background-color: #717171;\n}\n\n/* Add an italic font style to all quotes */\nq {font-style: normal;}\n\n/* Add a blue color to the author */\n.author {\n    background: #393a3a;\n    padding: 6px;\n    position: relative;\n    width: 100%;\n    color: #409a44;\n    height: 29px;\n    top: 7px;\n    font-size: 20px;\n    border-radius: 8px;\n    right: 5px;\n}\n\no {\n    font-size: 81px;\n    color: #f5ab01;\n}\nfl {\n    font-size: 20px;\n}\nep{\n    position: inherit;\n    display: inline-block;\n    color: #ffffff;\n    border: 2px solid #333;\nbackground-image: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0, #32A3C5),\n    color-stop(1, #2894B5)\n    ) !important;\n    background-image: -o-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -moz-linear-gradient(bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    background-image: -webkit-linear-gradient(bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    background-image: -ms-linear-gradient(bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    background-image: linear-gradient(to bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    \n    text-shadow: 0px 2px 3px rgb(56, 56, 56);    border-radius: 12px;\n    font-size: 14px;\n    text-align: center;\n   padding: 3px 1px 3px 1px;\n    font-family: inherit;\n    width: 100%;\n    margin: 2px;\n}\nar {\n    position: inherit;\n    display: inline-block;\n    color: #ffffff;\n    border: 2px solid #333;\nbackground-image: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0, #32A3C5),\n    color-stop(1, #2894B5)\n    ) !important;\n    background-image: -o-linear-gradient(bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    background-image: -moz-linear-gradient(bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    background-image: -webkit-linear-gradient(bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    background-image: -ms-linear-gradient(bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    background-image: linear-gradient(to bottom, #2b98b9 0%, #1b6c85 100%) !important;\n    \n    text-shadow: 0px 2px 3px rgb(56, 56, 56);    border-radius: 12px;\n    font-size: 14px;\n    text-align: center;\n   padding: 3px 1px 3px 1px;\n    font-family: inherit;\n    width: 100%;\n    margin: 2px;\n}\ny{\n       position: inherit;\n    display: inline-block;\n    color: #ffffff;\n    border: 2px solid #333;\nbackground-image: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0, #32A3C5),\n    color-stop(1, #2894B5)\n    ) !important;\n    background-image: -o-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -moz-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -webkit-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -ms-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: linear-gradient(to bottom, #4caf50 0%, #378a3b 100%) !important;\n    \n    text-shadow: 0px 2px 3px rgb(56, 56, 56);    border-radius: 12px;\n    font-size: 14px;\n    text-align: center;\n   padding: 3px 1px 3px 1px;\n    font-family: inherit;\n    width: 100%;\n    margin: 2px;\n}\nt {\n    position: inherit;\n    display: inline-block;\n    color: #ffffff;\n    border: 2px solid #333;\nbackground-image: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0, #32A3C5),\n    color-stop(1, #2894B5)\n    ) !important;\n    background-image: -o-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -moz-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -webkit-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -ms-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: linear-gradient(to bottom, #4caf50 0%, #378a3b 100%) !important;\n    \n    text-shadow: 0px 2px 3px rgb(56, 56, 56);    border-radius: 12px;\n    font-size: 14px;\n    text-align: center;\n   padding: 3px 1px 3px 1px;\n    font-family: inherit;\n    width: 100%;\n    margin: 2px;\n}\n\n#my-locker {\n    background: #cfedf5 url('https://d13pxqgp3ixdbh.cloudfront.net/uploads/152180683207a6e47b4648797ac7878916ebeb9906.png') top center !important;\n    box-shadow: 0 1px 0 rgb(255, 255, 255) !important;\n    position: relative;\n}\n#my-locker #my-locker-body {\n    background: #282828;\n}\nd {\n    color: #1a4983;\n}\ni.fab.fa-apple {\n    font-family: fontawesome;\n    color: #000802;\n    font-size: 17px;\n    font-style: normal;\n    margin: 1px 0px 4px;\n    left: 9px;\n    padding: 4px;\n}\nz {\n    color: #f55c13;\n}\ne {\n    color: #ffffff;\n    font-family: 'Montserrat';\n    font-size: 18px;\n    FONT-WEIGHT: 700;\n    padding: 10px 0px 7px 0px;\n    border-radius: 0px 0px 25px 25px;\n    display: list-item;\n    justify-content: center;\n    background: #2b99ba;\n    margin: -21px 4px 3px;\n    border-bottom: 3px solid #0757ab;\n}\nbody.mobile #my-locker {\n    background: transparent !important;\n    border: 0 !important;\n    border-radius: 0 !important;\n    box-shadow: none !important;\n    margin: 0 !important;\n    width: 100% !important;\n}\n\nbody.mobile #my-locker-background {\n    background-color: #e4f9ff !important;\n    background-image: url('https://s3-us-west-1.amazonaws.com/bucket.cpabuild.com/uploads/152180683207a6e47b4648797ac7878916ebeb9906.png') !important;\n    background-size: cover !important;\n    opacity: 1 !important;\n}\n\n#my-locker-top img {\n    width: 100%;\n}\n\nbody.mobile #my-locker-top img {\n    max-width: 100%;\n    margin: 0 auto;\n}\n\n#my-locker-body-offers-list a {\n    background-image: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0, blue),\n    color-stop(1, blue)\n    ) !important;\n    background-image: -o-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -moz-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -webkit-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: -ms-linear-gradient(bottom, #4caf50 0%, #378a3b 100%) !important;\n    background-image: linear-gradient(to bottom, #4caf50 0%, #378a3b 100%) !important;\n    \n    text-shadow: 0px 2px 3px rgb(56, 56, 56);\n    \n    -webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75);\n    -moz-box-shadow:    0px 1px 2px 1px rgba(50, 50, 50, 0.75);\n    box-shadow:         0px 1px 2px 1px rgba(50, 50, 50, 0.75);\n}\n\n#my-locker-body-offers-list a:hover {\n    opacity: 0.9;\n}\n\n.my-locker-body-text-top img {\n    height: 40px;\n\n    margin: 15px 0 20px;\n}\n\n.my-locker-body-text-bottom i {\n    color: #D6318C;\n}",
+        google: {
+          "analytics-tracking-id": "",
+          "event-tracking": "disabled",
+          translate: "enabled",
+        },
+        instructions:
+          '- To change the Header text: Click "Design Your Content Locker", choose "Body > Offers", and change "Top Text"\n\n- To change the Footer text: Click "Design Your Content Locker", choose "Body > Offers", and change "Bottom Text"',
+        "javascript-custom":
+          'var slideIndex = 1;\nshowSlides(slideIndex);\n\nfunction plusSlides(n) {\n  showSlides(slideIndex += n);\n}\n\nfunction currentSlide(n) {\n  showSlides(slideIndex = n);\n}\n\nfunction showSlides(n) {\n  var i;\n  var slides = document.getElementsByClassName("mySlides");\n  var dots = document.getElementsByClassName("dot");\n  if (n > slides.length) {slideIndex = 1}\n    if (n < 1) {slideIndex = slides.length}\n    for (i = 0; i < slides.length; i++) {\n      slides[i].style.display = "none";\n    }\n    for (i = 0; i < dots.length; i++) {\n      dots[i].className = dots[i].className.replace(" active", "");\n    }\n  slides[slideIndex-1].style.display = "block";\n  dots[slideIndex-1].className += " active";\n}',
+        offers: {
+          display: "2",
+          "min-offers": "1",
+          "min-payout": "1",
+          "on-complete": "redirect",
+          "redirect-url":
+            "https://www.fibonair.com/en/games/download-4723-one-piece-bounty-rush",
+          "show-tooltips": "disabled",
+        },
+        other: {
+          "alert-before-leaving": "disabled",
+          "disable-right-click": "enabled",
+          "esc-key-close": "disabled",
+          "human-verification": "disabled",
+        },
+        text: {
+          header: "",
+          "human-verification": "Verify Through Survey",
+          "body-top":
+            '<div class="slideshow-container">  <div class="mySlides">   <p class="last">LAST STEP</p>   <q>Complete one of the offers below to install Game automatically </q>      <p class="author">🇺🇸ENGLISH</p>   </div>     <div class="mySlides">   <p class="last">SISTA STEGET</p> <q>Ange ditt mobilnummer för att installera Game automatiskt </q>  <p class="author">🇸🇪SUÉDOIS</p>   </div> <div class="mySlides">      <p class="last">ÚLTIMO PASO</p> <q>Complete una de las ofertas a continuación para instalar el juego automáticamente </q>      <p class="author">🇪🇸SPANISH</p>   </div>   <div class="mySlides">   <p class="last">آخر خطوة</p>  <q> أكمل أحد العروض أدناه لتثبيت اللعبة تلقائيًا </q>      <p class="author">🇸🇦ARABIC</p>   </div> <div class="mySlides">   <p class="last">LETZTER SCHRITT</p>   <q>Füllen Sie eines der folgenden Angebote aus, um das Spiel automatisch zu installieren </q>      <p class="author">🇩🇪DEUTSH</p>   </div> <div class="mySlides">   <p class="last">ULTIMO PASSO</p>   <q>Completa una delle offerte seguenti per installare il gioco automaticamente</q>      <p class="author">🇮🇹ITALIEN</p>   </div>  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>    <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>  <div class="dot-container">   <span class="dot" onclick="currentSlide(1)"></span>   <span class="dot"  onclick="currentSlide(2)"></span>   <span class="dot" onclick="currentSlide(3)"></span>',
+          "body-bottom":
+            '<iframe src="https://player.vimeo.com/video/689589975?h=8cb4c81a45&autoplay=1&loop=1&title=0&byline=0&portrait=0" width="320" height="180" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>',
+          footer: "",
+        },
+      };
+
+      // Our live Offers.
+      var liveOffers = [
+        {
+          id: "53265170",
+          name: "Survey2Cash - VPN Survey",
+          anchor:
+            "Finish a Short VPN Survey to Find Best Way to Protect Your Device!",
+          conversion: "Complete the survey",
+          category_id: "3",
+          network_icon:
+            "https:\/\/i.gyazo.com\/191034c3c8f19eb3d529ac5458f576fc.png",
+          user_payout: "0.09",
+          payout: "0.09",
+          user_enabled: "1",
+          url:
+            "\/public\/dynamo\/lockerClick.php?offer=53265170&offer_position=1&it=3191848&m=0&visitor_id=Vdb53bae87f5a3&cpguid=5vfz9jfwv&hash=a507ded23ca9ff96f1f319bda46ff3f8",
+        },
+        {
+          id: "53265169",
+          name: "Survey2Cash - Finance Survey",
+          anchor: "Take a FREE Survey to Become a Millionare Now!",
+          conversion: "Complete the survey",
+          category_id: "3",
+          network_icon:
+            "https:\/\/i.gyazo.com\/3ba799a7acc15c3c7714acb51da1bd0f.png",
+          user_payout: "0.09",
+          payout: "0.09",
+          user_enabled: "1",
+          url:
+            "\/public\/dynamo\/lockerClick.php?offer=53265169&offer_position=2&it=3191848&m=0&visitor_id=Vdb53bae87f5a3&cpguid=5vfz9jfwv&hash=d27c36c5c86881c2d99ceb60fce7a550",
+        },
+        {
+          id: "53265171",
+          name: "Survey2Cash - Sweep Survey",
+          anchor: "Big Reward is Waiting for You! Enter Your Details Now!",
+          conversion: "Complete the survey",
+          category_id: "3",
+          network_icon:
+            "https:\/\/i.gyazo.com\/799c8b18154b294ad9632189cc5f14cc.png",
+          user_payout: "0.09",
+          payout: "0.09",
+          user_enabled: "1",
+          url:
+            "\/public\/dynamo\/lockerClick.php?offer=53265171&offer_position=3&it=3191848&m=0&visitor_id=Vdb53bae87f5a3&cpguid=5vfz9jfwv&hash=7dea3118c117ac14c5c8a5cbc9cb5653",
+        },
+      ];
+
+      // Some test Offers.
+      var testOffers = [
+        {
+          id: "152916",
+          name: "LifeScript - Travel Box",
+          anchor: "Get your FREE Travel Samples!",
+          conversion: "Get your FREE Travel Samples!",
+          network_icon: "",
+          user_payout: "1.20",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "171613",
+          name: "National Consumer Center - Amazon Holiday $1000",
+          anchor: "Get Your $1000 Amazon Giftcard!",
+          conversion: "Get Your $1000 Amazon Giftcard!",
+          network_icon: "",
+          user_payout: "1.40",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "144872",
+          name: "LifeScript - Sephora",
+          anchor: "Get your Free Sephora Products!",
+          conversion: "Get your Free Sephora Products!",
+          network_icon: "",
+          user_payout: "1.84",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "210961",
+          name: "National Consumer Center - Coke vs Pepsi $100",
+          anchor: "Get Your $100 Giftcard!",
+          conversion: "Get Your $100 Giftcard!",
+          network_icon: "",
+          user_payout: "1.40",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "144863",
+          name: "LifeScript -Netflix",
+          anchor: "Get your FREE month of Netflix!",
+          conversion: "Get your FREE month of Netflix!",
+          network_icon: "",
+          user_payout: "1.76",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "200844",
+          name: "CRC Target - US",
+          anchor: "$500 Target Gift Card! ",
+          conversion: "$500 Target Gift Card! ",
+          network_icon: "",
+          user_payout: "1.12",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "152914",
+          name: "Lab42 Survey Router - US",
+          anchor: "Earn Cash, Sweepstakes, and Prizes!",
+          conversion: "Earn Cash, Sweepstakes, and Prizes!",
+          network_icon: "",
+          user_payout: "0.72",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "203625",
+          name: "LG TV - US",
+          anchor:
+            "Join the 4K revolution, Get your new LG UHD TV with a prepaid Visa Gift Card! ",
+          conversion:
+            "Join the 4K revolution, Get your new LG UHD TV with a prepaid Visa Gift Card! ",
+          network_icon: "",
+          user_payout: "0.96",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "200841",
+          name: "Android vs iPhone - US",
+          anchor: "$500 Visa Gift Card! ",
+          conversion: "$500 Visa Gift Card! ",
+          network_icon: "",
+          user_payout: "0.96",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+        {
+          id: "210184",
+          name: "LifeScript - L'Oreal (email submit)",
+          anchor: "Get FREE L'Oreal Samples!",
+          conversion: "Get FREE L'Oreal Samples!",
+          network_icon: "",
+          user_payout: "1.20",
+          user_enabled: "1",
+          url: "\/public\/click.php",
+        },
+      ];
+
+      // Capture some of the custom variable data.
+      var editing =
+        document.location.href.indexOf("members.cpabuild.com") > -1
+          ? true
+          : false;
+
+      // Determine which Offers to use.
+      var useOffers = editing === true ? testOffers : liveOffers;
+
+      // What default variables were provided to us?
+      var baseLockerSettings = {
+        css: {
+          pc: {
+            body: {
+              background: {
+                color: "#ffffff",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+            },
+            "body-human-verification": {
+              background: {
+                color: "#fbfbfb",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "background-hover": {
+                color: "#b1b1b1",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-radius": "4",
+              "border-color": "#b9b9b9",
+              "border-color-hover": "#b9b9b9",
+              "border-width": "1",
+              "font-color": "#9c9c9c",
+              "font-color-hover": "#565656",
+              "font-size": "14",
+              "font-weight": "normal",
+              "margin-bottom": "79",
+              "margin-top": "84",
+              "padding-top": "8",
+              "padding-bottom": "8",
+            },
+            "body-offers": {
+              "text-bottom-align": "center",
+              "text-bottom-color": "#959595",
+              "text-bottom-padding-bottom": "17",
+              "text-bottom-padding-top": "12",
+              "text-bottom-shadow": "transparent",
+              "text-bottom-size": "13",
+              "text-bottom-weight": "normal",
+              "text-top-align": "center",
+              "text-top-color": "#696969",
+              "text-top-padding-bottom": "20",
+              "text-top-padding-top": "21",
+              "text-top-shadow": "transparent",
+              "text-top-size": "15",
+              "text-top-weight": "normal",
+            },
+            "body-offers-list": {
+              align: "center",
+              background: {
+                color: "#fbfbfb",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "background-hover": {
+                color: "#b1b1b1",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-color": "#b9b9b9",
+              "border-radius": "3",
+              "border-width": "1",
+              "font-color": "#9c9c9c",
+              "font-color-hover": "#565656",
+              "font-size": "13",
+              "font-weight": "normal",
+              "margin-bottom": "4",
+              "margin-top": "0",
+              "padding-bottom": "9",
+              "padding-top": "9",
+              "text-align": "center",
+              width: "50",
+            },
+            header: {
+              background: {
+                color: "#ffffff",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-color": "#ffffff",
+              "border-width": "1",
+              "border-box-shadow": "#d1d1d1",
+              display: "block",
+              "font-align": "center",
+              "font-color": "#5f5f5f",
+              "font-size": "17",
+              "font-weight": "normal",
+              "padding-bottom": "18",
+              "padding-top": "21",
+            },
+            footer: {
+              background: {
+                color: "#ffffff",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              "border-color": "#ffffff",
+              "border-width": "1",
+              "border-box-shadow": "#d1d1d1",
+              display: "block",
+              "font-align": "center",
+              "font-color": "#5f5f5f",
+              "font-size": "10",
+              "font-weight": "normal",
+              "padding-bottom": "11",
+              "padding-top": "13",
+            },
+            locker: {
+              "border-radius": "2",
+              "box-shadow": "#292929",
+              font: "Montserrat",
+              width: "800",
+            },
+            page: {
+              background: {
+                color: "#464141",
+                horizontal: "left",
+                image: "",
+                size: "cover",
+                vertical: "top",
+              },
+              opacity: "65",
+            },
+          },
+          phone: {
+            body: {},
+            "body-human-verification": {
+              "border-radius": "4",
+              "border-width": "1",
+              "font-size": "11",
+              "font-weight": "normal",
+              "margin-bottom": "57",
+              "margin-top": "60",
+              "padding-top": "8",
+              "padding-bottom": "8",
+            },
+            "body-offers": {
+              "text-bottom-padding-bottom": "15",
+              "text-bottom-padding-top": "9",
+              "text-bottom-size": "10",
+              "text-bottom-weight": "normal",
+              "text-top-padding-bottom": "15",
+              "text-top-padding-top": "19",
+              "text-top-size": "11",
+              "text-top-weight": "normal",
+            },
+            "body-offers-list": {
+              "border-width": "1",
+              "font-size": "9",
+              "font-weight": "normal",
+              "margin-bottom": "4",
+              "margin-top": "0",
+              "padding-bottom": "5",
+              "padding-top": "6",
+              width: "50",
+            },
+            header: {
+              "border-width": "1",
+              "font-size": "13",
+              "font-weight": "normal",
+              "padding-bottom": "10",
+              "padding-top": "13",
+            },
+            footer: {
+              "border-width": "1",
+              "font-size": "9",
+              "font-weight": "normal",
+              "padding-bottom": "8",
+              "padding-top": "5",
+            },
+            locker: {},
+            page: {},
+          },
+        },
+        "css-custom": "",
+        google: {
+          "analytics-tracking-id": "",
+          "event-tracking": "disabled",
+          translate: "enabled",
+        },
+        "javascript-custom": "",
+        offers: {
+          display: "5",
+          "min-offers": "1",
+          "min-payout": "1",
+          "on-complete": "redirect",
+          "redirect-url": "https://google.com",
+          "show-tooltips": "disabled",
+        },
+        other: {
+          "alert-before-leaving": "disabled",
+          "disable-right-click": "enabled",
+          "esc-key-close": "disabled",
+          "human-verification": "disabled",
+        },
+        text: {
+          header: "Complete an Offer to prove you aren't a Bot",
+          "human-verification": "Verify Through Survey",
+          "body-top": "Complete one of the Offers below to unlock your prize",
+          "body-bottom": "Waiting for verification%dots%",
+          footer:
+            "It takes 2-3 minutes for the prize to unlock in your Country.",
+        },
+      };
+
+      // Populate the Locker Settings appropriately.
+      function recursivelyGenerateSettings(needed, provided) {
+        var returning = {};
+
+        $.each(needed, function(key, value) {
+          if (typeof value == "object") {
+            returning[key] = recursivelyGenerateSettings(
+              value,
+              key in provided ? provided[key] : {}
+            );
+          } else {
+            returning[key] = key in provided ? provided[key] : needed[key];
+          }
+        });
+
+        return returning;
+      }
+
+      // If the custom Settings were provided as a string, try and convert it to a JSON Object.
+      if (typeof savedLockerSettings == "string") {
+        try {
+          // Was the saved locker provided to us as valid JSON?
+          var jsonParse = JSON.parse(savedLockerSettings);
+
+          // If it's not a valid JSON object.
+          if (typeof jsonParse !== "object" || !("css" in jsonParse)) {
+            savedLockerSettings = {};
+          }
+        } catch (error) {
+          savedLockerSettings = {};
+        }
+      }
+
+      // Retrieve the recursively generated settings.
+      var useLockerSettings = recursivelyGenerateSettings(
+        baseLockerSettings,
+        savedLockerSettings
+      );
+    </script>
+
+    <!-- Load our Application's JavaScript file -->
+    <script src="https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/151999678694833b4c5a49a55ef7f9224b286820f0.js"></script>
+  </head>
+
+  <body class="theme-list">
+    <!-- Google Analytics Tracking Code -->
+    <script>
+      // If Google Analytics is enabled.
+      if (
+        editing === false &&
+        useLockerSettings["google"]["analytics-tracking-id"].length > 0
+      ) {
+        /*
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', useLockerSettings['google']['analytics-tracking-id'], 'auto');
+        */
+      }
+    </script>
+
+    <!-- Our Google Translate Element -->
+    <!--<div id="google_translate_element" style="display: none;"></div>-->
+
+    <!-- BEGIN: Content Locker Background Overlay -->
+    <div id="my-locker-background"></div>
+    <!-- END: Content Locker Background Overlay -->
+
+    <!-- BEGIN: Custom Content Locker -->
+    <div id="my-locker">
+      <!-- BEGIN: Content Locker Header -->
+      <div id="my-locker-top">
+        <!--<i class="fa fa-question-circle"></i>-->
+        <span></span>
+      </div>
+      <!-- END: Content Locker Header -->
+
+      <!-- BEGIN: Content Locker Body -->
+      <div id="my-locker-body">
+        <!-- BEGIN: Human Verification -->
+        <div id="my-locker-body-human-verification">
+          <button></button>
+        </div>
+        <!-- END: Human Verification -->
+
+        <!-- BEGIN: Content Locker Offers -->
+        <div id="my-locker-body-offers">
+          <div class="my-locker-body-text-top"></div>
+          <div id="my-locker-body-offers-list"></div>
+          <div class="my-locker-body-text-bottom"></div>
+        </div>
+        <!-- END: Content Locker Offers -->
+      </div>
+      <!-- END: Content Locker Body -->
+
+      <!-- BEGIN: Locker Footer -->
+      <div id="my-locker-bottom">
+        <span></span>
+      </div>
+      <!-- END: Locker Footer -->
+    </div>
+    <!-- END: Custom Content Locker -->
+
+    <!-- BEGIN: Content Locker Customization Modal Overlay -->
+    <div id="my-customization-overlay"></div>
+    <!-- END: Content Locker Customization Modal Overlay -->
+
+    <!-- BEGIN: Content Locker Customization Modal -->
+    <div id="my-customization-modal" class="notranslate">
+      <div id="my-customization-modal-header">
+        <span>Choose a File</span>
+        <button>Upload</button>
+        <i class="fa fa-times"></i>
+        <input type="file" id="uploading" style="display: none;" />
+      </div>
+      <div id="my-customization-modal-body">
+        <div id="file-list"></div>
+      </div>
+      <div id="my-customization-modal-footer"></div>
+    </div>
+    <!-- END: Content Locker Customization Modal -->
+
+    <!-- BEGIN: Custom CSS Editor -->
+    <div
+      class="my-editor-modal draggable-container notranslate my-editor-modal-css"
+      data-type="css"
+    >
+      <div class="my-editor-dragger draggable">CSS</div>
+      <div class="my-editor-options">
+        <button>Apply</button>
+        <i class="my-editor-close fa fa-times"></i>
+      </div>
+      <div id="my-custom-code-editor-css" class="my-editor-box"></div>
+    </div>
+    <!-- END: Custom CSS Editor -->
+
+    <!-- BEGIN: Custom JavaScript Editor -->
+    <div
+      class="my-editor-modal draggable-container notranslate my-editor-modal-javascript"
+      data-type="javascript"
+    >
+      <div class="my-editor-dragger draggable">JavaScript</div>
+      <div class="my-editor-options">
+        <button>Apply</button>
+        <i class="my-editor-close fa fa-times"></i>
+      </div>
+      <div id="my-custom-code-editor-javascript" class="my-editor-box"></div>
+    </div>
+    <!-- END: Custom JavaScript Editor -->
+
+    <!-- BEGIN: Content Locker Customization Treeview Overlay -->
+    <div id="my-customization-treeview-overlay"></div>
+    <!-- END: Content Locker Customization Treeview Overlay -->
+
+    <!-- BEGIN: Content Locker Customization Tools -->
+    <div
+      id="my-customization-treeview"
+      class="theme-list list-empty notranslate"
+      data-device="pc"
+    >
+      <div id="my-customization-treeview-logo">
+        <img
+          src="https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/150170764295f591d2e1daeb4fda0985149aa31c04.png"
+        />
+      </div>
+      <div id="my-customization-treeview-heading">
+        <div class="theme-options">
+          <i class="fa fa-chevron-left"></i>
+          <span></span>
+          <button id="theme-rename">Rename</button>
+        </div>
+        <div class="theme-list">
+          <i class="fa fa-chevron-down"></i>
+          <span>Choose from one of your Content Lockers</span>
+        </div>
+      </div>
+      <div id="my-customization-treeview-options">
+        <ul id="theme-list" class="root theme-list">
+          <li class="empty">
+            <div>
+              Welcome to CPABuild's Visual Editor for Content Lockers!<br /><br />
+              Get started by <font>creating your first Content Locker</font>
+            </div>
+          </li>
+        </ul>
+        <ul id="theme-options" class="root theme-options">
+          <li>
+            <div>
+              <i class="fa fa-fw fa-cog"></i>
+              General
+            </div>
+            <ul data-depth="1">
+              <li class="modify-inline">
+                <div>
+                  Escape Key Close
+
+                  <select data-group="other" data-key="esc-key-close">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                  </select>
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  Disable Right Click
+
+                  <select data-group="other" data-key="disable-right-click">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                  </select>
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  Alert Before Leaving
+
+                  <select data-group="other" data-key="alert-before-leaving">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li style="display: none !important;">
+            <div>
+              <i class="fa fa-fw fa-google"></i>
+              Google
+            </div>
+            <ul data-depth="1">
+              <li class="modify-inline">
+                <div>
+                  Analytics Tracking ID
+
+                  <a
+                    class="hug-input"
+                    href="https://support.google.com/analytics/answer/1008080?hl=en"
+                    title="Need help finding your Tracking ID? Click here"
+                    target="_blank"
+                    >?</a
+                  >
+
+                  <input
+                    class="hugged-input"
+                    type="text"
+                    placeholder="UA-xxxxxxxx-x"
+                    data-group="google"
+                    data-key="analytics-tracking-id"
+                  />
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  Event Tracking
+
+                  <a
+                    class="hug-input hug-input-select"
+                    href="https://analytics.google.com/analytics/web/template?uid=8TddRfv3TlaRDqOlALQ2hA"
+                    title="Make a copy of our pre-configured Google Analytics Dashboard"
+                    target="_blank"
+                    >?</a
+                  >
+
+                  <select
+                    class="hugged-input"
+                    data-group="google"
+                    data-key="event-tracking"
+                  >
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                  </select>
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  Auto-Translate
+
+                  <select data-group="google" data-key="translate">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <i class="fa fa-fw fa-list-ol"></i>
+              Offers
+            </div>
+            <ul data-depth="1">
+              <li class="modify-inline">
+                <div>
+                  Show Offer Tooltips
+
+                  <select data-group="offers" data-key="show-tooltips">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                  </select>
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  Number of Offers
+
+                  <input
+                    type="number"
+                    data-group="offers"
+                    data-key="display"
+                    min="1"
+                    max="10"
+                    value="5"
+                  />
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  Offers Required
+
+                  <input
+                    type="number"
+                    data-group="offers"
+                    data-key="min-offers"
+                    min="1"
+                    max="10"
+                    value="5"
+                  />
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  Payout Required (Cents)
+
+                  <input
+                    type="number"
+                    data-group="offers"
+                    data-key="min-payout"
+                    min="1"
+                    max="10"
+                    value="5"
+                  />
+                </div>
+              </li>
+              <li class="modify-inline">
+                <div>
+                  On Offer Complete
+
+                  <select data-group="offers" data-key="on-complete">
+                    <option value="close">Close Locker</option>
+                    <option value="redirect">Redirect to URL</option>
+                  </select>
+                </div>
+              </li>
+              <li id="redirect-url" class="modify-inline">
+                <div>
+                  Redirect URL
+
+                  <input
+                    type="text"
+                    data-group="offers"
+                    data-key="redirect-url"
+                    placeholder="http://www.your-website.com"
+                  />
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li id="my-customization-css" class="separated-from-the-herd">
+            <div>
+              <i class="fa fa-fw fa-puzzle-piece"></i>
+              Design Your Content Locker
+              <div class="device-manager">
+                <i
+                  class="fa fa-desktop active"
+                  data-device="pc"
+                  title="Preview as Desktop"
+                ></i>
+                <i
+                  class="fa fa-mobile"
+                  data-device="phone"
+                  title="Preview as Mobile Phone"
+                ></i>
+              </div>
+            </div>
+          </li>
+          <li id="theme-custom-code">
+            <div>
+              <i class="fa fa-fw fa-css3"></i>
+              Custom CSS &amp; JavaScript
+            </div>
+            <ul data-depth="1">
+              <li>
+                <div>CSS</div>
+              </li>
+              <li>
+                <div>JavaScript</div>
+              </li>
+            </ul>
+          </li>
+          <li id="theme-options">
+            <div>
+              <i class="fa fa-fw fa-paint-brush"></i>
+              Design Options
+            </div>
+            <ul data-depth="1">
+              <li id="theme-premades">
+                <div>
+                  <i class="fa fa-fw fa-gift"></i>
+                  Pre-Made Designs
+                </div>
+                <ul data-depth="2"></ul>
+              </li>
+              <li id="theme-import">
+                <div>
+                  <i class="fa fa-fw fa-cloud-download"></i>
+                  Import Design
+                </div>
+              </li>
+              <li id="theme-export">
+                <div>
+                  <i class="fa fa-fw fa-cloud-upload"></i>
+                  Export Design
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li id="theme-code-for-website" class="separated-from-the-herd">
+            <a href="https://members.cpabuild.com/lockerCode" target="_blank">
+              <i class="fa fa-fw fa-code"></i>
+              Build a Link / Code for Website
+            </a>
+          </li>
+          <li id="theme-delete">
+            <div>
+              <i class="fa fa-fw fa-times"></i>
+              Delete Permanently
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="my-customization-treeview-bottom">
+        <div id="my-customization-treeview-bottom-buttons">
+          <button class="create">
+            <i class="fa fa-plus"></i>
+            <span>Create New</span>
+          </button>
+          <button class="save">
+            <i class="fa fa-save"></i>
+            <span>Save</span>
+          </button>
+        </div>
+        <span class="credit"
+          >Version 1.0.8 by <font class="notranslate">@Prime</font></span
+        >
+      </div>
+    </div>
+    <!-- END: Content Locker Customization Tools -->
+
+    <script>
+      // What file is being loaded?
+      var fileUrls = {
+        editing:
+          "https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/1519819784efd1fb51e3a09545d6259de3ad2515f7.js",
+        //'themes': 'https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/1521379645c782a2afa5d83c9fa90847618c0f6610.js',
+        themes:
+          "https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/15251987582db238732549eee063b62a7d50f1717f.js",
+        //'visiting': 'https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/1519819785e9ebf33574139d1ec0bab198158fa8c1.js'
+        //'visiting': 'https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/1528378365c61458d74e58133affe8bd44bc4cbf9c.js'
+        //'visiting': 'https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/152872119825f2a3bc2ee6e39f95c7fc4f6c741672.js'
+        visiting:
+          "https://s3.us-west-1.amazonaws.com/cloudfls.co/uploads/assets/1541527423a607b15a712c4823251c88682d1dbf54.js",
+      };
+
+      // Load our JavaScript file.
+      $.getScript(fileUrls[editing === true ? "editing" : "visiting"]);
+    </script>
+    <script src="/public/external/guid.js"></script>
+  </body>
+</html>
