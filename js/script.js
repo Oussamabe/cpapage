@@ -92,7 +92,9 @@ $(".cpaBtn").click(function() {
     if (contor == 100) {
       clearInterval(settimes);
       window.location.replace(
-        "https://5apps.us" + "/verify/" + `${$(".cpaBtn").data("lockers")}`
+        "https://4appst.netlify.app" +
+          "/verify/" +
+          `${$(".cpaBtn").data("lockers")}`
       );
     } else {
       contor = contor + 1;
